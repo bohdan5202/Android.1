@@ -10,4 +10,28 @@
     <string name="blad_imie">Imię nie może być puste</string>
     <string name="blad_nazwisko">Nazwisko nie może być puste</string>
     <string name="blad_liczba_ocen">Liczba ocen musi być między 5 a 15</string>
+    <string name="radio1">1</string>
+    <string name="radio2">2</string>
+    <string name="radio3">3</string>
+    <string name="radio4">4</string>
+    <string name="radio5">5</string>
+    <string name="tv">TextView</string>
+
+    <string-array name="subject_lessons">
+        <item>Matematyka</item>
+        <item>Język polski</item>
+        <item>Język angielski</item>
+        <item>Język niemiecki</item>
+        <item>Informatyka</item>
+        <item>Fizyka</item>
+        <item>Chemia</item>
+        <item>Biologia</item>
+        <item>Geografia</item>
+        <item>Historia</item>
+        <item>Wiedza o społeczeństwie (WOS)</item>
+        <item>Wychowanie fizyczne (WF)</item>
+        <item>Plastyka</item>
+        <item>Muzyka</item>
+        <item>Technika</item>
+    </string-array>
 </resources>
