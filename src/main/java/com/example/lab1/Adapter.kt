@@ -14,10 +14,6 @@ class Adapter(private val subject: List<String>) : RecyclerView.Adapter<ViewHold
 
     private val myList: MutableList<Int> = MutableList(subject.size) { -1 }
 
-    fun bind(position: Int){
-
-    }
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -68,7 +64,7 @@ class Adapter(private val subject: List<String>) : RecyclerView.Adapter<ViewHold
             }
         }
     }
-    fun getList(): List<Int> {
+    fun getList(): MutableList<Int> {
         return myList
     }
 }

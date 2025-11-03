@@ -16,6 +16,11 @@
     <string name="radio4">4</string>
     <string name="radio5">5</string>
     <string name="tv">TextView</string>
+    <string name="oblicz">Oblicz średnią</string>
+    <string name="Avera">TextView</string>
+    <string name="avera">Średnia %.2f</string>
+    <string name="Sup">Super :)</string>
+    <string name="tym_razem_mi_nie_posz_o">Tym razem mi nie poszło</string>
 
     <string-array name="subject_lessons">
         <item>Matematyka</item>
