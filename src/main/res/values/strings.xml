@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LAB1.</string>
+    <string name="imie">Imię:</string>
+    <string name="imie_hint">Podaj imię\n</string>
+    <string name="nazwisko">Nazwisko:</string>
+    <string name="nazwisko_hint">Podaj nazwisko</string>
+    <string name="liczba_ocen">Liczba ocen:</string>
+    <string name="liczba_ocen_hint">Podaj liczbę ocen 5-15</string>
+    <string name="oceny">Oceny</string>
+    <string name="blad_imie">Imię nie może być puste</string>
+    <string name="blad_nazwisko">Nazwisko nie może być puste</string>
+    <string name="blad_liczba_ocen">Liczba ocen musi być między 5 a 15</string>
+</resources>
