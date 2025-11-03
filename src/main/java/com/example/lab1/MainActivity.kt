@@ -64,13 +64,19 @@ class MainActivity : AppCompatActivity() {
     private fun openSecodActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         intent.putExtra("NUM", binding.etNubmers.text.toString().toInt())
-        startActivity(intent)
+        startSecondActivityForResult.launch(intent)
     }
 
     private fun setupListeners() {
         val fields = listOf(
-            Triple(binding.etName, getString(R.string.blad_imie)) { text: String -> text.isNotBlank() },
-            Triple(binding.etSurname, getString(R.string.blad_nazwisko)) { text: String -> text.isNotBlank() },
+            Triple(
+                binding.etName,
+                getString(R.string.blad_imie)
+            ) { text: String -> text.isNotBlank() },
+            Triple(
+                binding.etSurname,
+                getString(R.string.blad_nazwisko)
+            ) { text: String -> text.isNotBlank() },
             Triple(binding.etNubmers, getString(R.string.blad_liczba_ocen)) { text: String ->
                 text.toIntOrNull()?.let { it in 5..15 } ?: false
             }
@@ -90,8 +96,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnOceny.setOnClickListener {
-            openSecodActivityForRusult()        }
+            openSecodActivity()
+        }
     }
+
 
     private fun createTextWatcher(afterTextChanged: () -> Unit): TextWatcher {
         return object : TextWatcher {
@@ -125,6 +133,4 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnOceny.visibility = if (allValid) View.VISIBLE else View.GONE
     }
-
-
 }
