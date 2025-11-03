@@ -1,5 +1,6 @@
 package com.example.lab1
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Telephony
@@ -9,6 +10,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -17,6 +19,16 @@ import kotlin.toString
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    private val startSecondActivityForResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data: Intent? = result.data
+                val average = data?.getDoubleExtra("AVERAGE", 0.0) ?: 0.0
+                Toast.makeText(this, "Średnia ocen: $average", Toast.LENGTH_LONG).show()
+            }
+
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnOceny.setOnClickListener {
-            openSecodActivity()        }
+            openSecodActivityForRusult()        }
     }
 
     private fun createTextWatcher(afterTextChanged: () -> Unit): TextWatcher {
